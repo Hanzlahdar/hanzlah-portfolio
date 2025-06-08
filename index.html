@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanzlah Khaliq Dar - Professional Portfolio</title>
+  <meta name="robots" content="noindex, noimageindex">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Manrope:wght@400;600;800&display=swap');
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      background: linear-gradient(to right, #f3f4f7, #dde6f2);
+      color: #2c3e50;
+      overflow-x: hidden;
+    }
+    header, footer {
+      background: #1a2238;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1100px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease-in-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h1, h2 {
+      color: #1a2238;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 800;
+    }
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+      transition: transform 0.5s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.04);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
+    }
+    .card a {
+      text-decoration: none;
+      color: inherit;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    ul { padding-left: 20px; line-height: 1.7; }
+    p { line-height: 1.8; }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      sections.forEach(section => observer.observe(section));
+    });
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && (e.key === 's' || e.key === 'S')) {
+        e.preventDefault();
+        alert('Downloads are restricted. Content is protected.');
+      }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Hanzlah Khaliq Dar</h1>
+    <p>Student | Tech Enthusiast | Creative Visual Designer</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <img src="hanzlah.jpg" alt="Hanzlah Khaliq Dar" style="width:200px;height:auto;border-radius:12px;display:block;margin:20px auto;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+    <p>I'm a passionate and disciplined student from Gujranwala, Pakistan, with a strong foundation in science and creative design. I’ve earned prestigious certifications, led sports teams, and created visual projects that merge technology with real-world impact.</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">MS PowerPoint</div>
+      <div class="card">Figma</div>
+      <div class="card">Canva</div>
+      <div class="card">Adobe Photoshop</div>
+      <div class="card">Graphic Design</div>
+      <div class="card">Presentation Design</div>
+      <div class="card">Logo Design</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Projects</h2>
+    <div class="projects">
+      <div class="card"><a href="https://drive.google.com/file/d/1DWnBFmGVhP6-P--Y1dg-31sSBGJuftyw/view?usp=drive_link" target="_blank"><h3>Time Management Techniques</h3><p>A visual guide to help students manage time effectively using proven methods. Click to view (view-only).</p></a></div>
+      <div class="card"><a href="https://drive.google.com/file/d/1PgwXtn5xP4nhxLmfn_xqMjcnYclbpNFR/view?usp=drive_link" target="_blank"><h3>EcoTech</h3><p>Explains smart and eco-friendly technologies for modern homes. Click to view (view-only).</p></a></div>
+      <div class="card"><a href="https://drive.google.com/file/d/1QXcbnvTShk7D9xnRiFncTsrKrH5Gh5iI/view?usp=drive_link" target="_blank"><h3>Productivity Hacks</h3><p>Tips and techniques to increase productivity and reduce stress for students. Click to view (view-only).</p></a></div>
+      <div class="card"><a href="https://docs.google.com/presentation/d/1IEaSRQk2rgeqONOKwEsOY7p5ijGZGOO4/edit?usp=drive_link&ouid=103959473170019027329&rtpof=true&sd=true" target="_blank"><h3>Business Infographic</h3><p>Infographic presentation on the journey from idea to funding in a business. Click to view (view-only).</p></a></div>
+      <div class="card"><a href="https://docs.google.com/presentation/d/1ZaQeTsQKt4q8vLm5zIoXLaeXYFsnAAm_/edit?usp=drive_link&ouid=103959473170019027329&rtpof=true&sd=true" target="_blank"><h3>Spotify Slides</h3><p>Presentation exploring Spotify user data and listening trends globally. Click to view (view-only).</p></a></div>
+      <div class="card"><a href="https://docs.google.com/presentation/d/1oU9y_aoJ1RRPmbCpnWOESXIXv81ydj_A/edit?usp=drive_link&ouid=103959473170019027329&rtpof=true&sd=true" target="_blank"><h3>Fruit Pie Template</h3><p>Creative template with colorful designs for product-based presentations. Click to view (view-only).</p></a></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Achievements</h2>
+    <ul>
+      <li>4 Science Distinctions from Principal (2023–2025)</li>
+      <li>Harvard CS50 Certificate in Computer Science</li>
+      <li>MS Excel Essentials – Harvard edX</li>
+      <li>National Games Finalist: Cricket, Badminton, Race, Archery</li>
+      <li>Team Leader – Seed Plantation Drive (1000+ seeds)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact Me</h2>
+    <p>If you'd like to collaborate or want custom design/presentation work, feel free to reach out!</p>
+    <p>Email: <a href="mailto:hanzlahdar98@gmail.com">hanzlahdar98@gmail.com</a></p>
+    <p>Phone: 03297146727</p>
+    <p>Location: Gakhar Mandi, Gujranwala, Pakistan</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Hanzlah Khaliq Dar | All content protected under copyright. No redistribution or reproduction allowed.</p>
+  </footer>
+</body>
+</html>
